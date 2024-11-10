@@ -3,7 +3,6 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       https://boomdevs.com
  * @since      1.0.0
  *
  * @package    Wp_Bnav
@@ -18,7 +17,7 @@
  *
  * @package    Wp_Bnav
  * @subpackage Wp_Bnav/admin
- * @author     BOOM DEVS <contact@boomdevs.com>
+ * @author     WP Messiah <contact@wpmessiah.com>
  */
 class Wp_Bnav_Admin {
 
@@ -140,7 +139,7 @@ class Wp_Bnav_Admin {
                 '<a class="wp_bnav_setting_button" href="'.esc_url(admin_url('/admin.php?page=wp-bnav-settings#tab=general-settings')).'">' . __( 'Settings', 'wp-bnav' ) . '</a>',
             );
             $pro_link = array(
-                '<a class="wp_bnav_pro_button" target="_blank" href="'.esc_url('https://boomdevs.com/products/wp-mobile-bottom-menu/#price').'">' . __( 'Go Pro', 'wp-bnav' ) . '</a>',
+                '<a class="wp_bnav_pro_button" target="_blank" href="'.esc_url('https://wpmessiah.com/products/wp-mobile-bottom-menu/#price').'">' . __( 'Go Pro', 'wp-bnav' ) . '</a>',
             );
         }
 

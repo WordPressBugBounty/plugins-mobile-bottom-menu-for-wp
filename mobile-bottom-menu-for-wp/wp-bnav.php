@@ -8,17 +8,16 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://boomdevs.com
  * @since             1.0.0
  * @package           Wp_Bnav
  *
  * @wordpress-plugin
  * Plugin Name:       WP Mobile Bottom Menu
- * Plugin URI:        https://boomdevs.com/products/wordpress-bottom-bar-navigation
+ * Plugin URI:        https://wpmessiah.com/products/wp-mobile-bottom-menu/
  * Description:       Smooth Navigation for Mobile. Create an Eye-Catching Sticky Bottom Menu with Limitless Customization Options.
- * Version:           1.2.7
- * Author:            BOOMDEVS
- * Author URI:        https://boomdevs.com
+ * Version:           1.2.8
+ * Author:            WP Messiah
+ * Author URI:        https://wpmessiah.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       wp-bnav
@@ -59,7 +58,7 @@ appsero_init_tracker_mobile_bottom_menu_for_wp();
 /**
  * Plugin global information..
  */
-define( 'WP_BNAV_VERSION', '1.2.7' );
+define( 'WP_BNAV_VERSION', '1.2.8' );
 define( 'WP_BNAV_PATH', plugin_dir_path( __FILE__ ) );
 define( 'WP_BNAV_URL', plugin_dir_url( __FILE__ ) );
 define( 'WP_BNAV_SLUG', 'wp-bnav' );

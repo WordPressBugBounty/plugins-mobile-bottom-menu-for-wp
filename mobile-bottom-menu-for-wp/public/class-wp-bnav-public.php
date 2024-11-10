@@ -4,7 +4,7 @@ require_once WP_BNAV_PATH . 'includes/class-wp-bnav-utils.php';
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       https://boomdevs.com
+ 
  * @since      1.0.0
  *
  * @package    Wp_Bnav
@@ -19,7 +19,7 @@ require_once WP_BNAV_PATH . 'includes/class-wp-bnav-utils.php';
  *
  * @package    Wp_Bnav
  * @subpackage Wp_Bnav/public
- * @author     BOOM DEVS <contact@boomdevs.com>
+ * @author     WP Messiah <contact@wpmessiah.com>
  */
 class Wp_Bnav_Public
 {

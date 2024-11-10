@@ -1,9 +1,9 @@
 === WP Mobile Bottom Menu ===
-Contributors: boomdevs
+Contributors: boomdevs, wpmessiah
 Tags: Bottom menu, mobile menu, sticky menu, Navigation Menu, menu
 Requires at least: 5.0
-Tested up to: 6.5.5
-Stable tag: 1.2.7
+Tested up to: 6.6.2
+Stable tag: 1.2.8
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -80,27 +80,17 @@ Do you want more features for your WordPress Mobile Bottom menu? Upgrade to the 
 
  Make sure you don't settle for a bottom menu plugin that does not meet your needs. We encourage you to take a look at the pro version of the **WP Mobile Bottom Menu** today and see how it can elevate your website to the next level.
 
-[Get the Pro](https://boomdevs.com/products/wp-mobile-bottom-menu/)
+[Get the Pro](https://wpmessiah.com/products/wp-mobile-bottom-menu/)
 
 [View Demo](https://wp-mobile-bottom-menu.boomdevs.com/bottom-menu/)
 
-[Read Documentation](https://boomdevs.com/docs/wp-mobile-bottom-menu/)
+[Read Documentation](https://wpmessiah.com/docs/wp-mobile-bottom-menu/)
 
-[Submit Ticket](https://boomdevs.com/forums/forum/wp-mobile-bottom-menu/)
+[Submit Ticket](https://wpmessiah.com/forums/forum/wp-mobile-bottom-menu/)
 
-Made with ❣️ By [BoomDevs](https://boomdevs.com/)
+Made with ❣️ By [WP Messiah](https://wpmessiah.com/)
 
 **If you really like this plugin please don't forget to give us your rating. Thanks so much!** ⭐⭐⭐⭐⭐
-
-## Privacy Policy
-
-WP Mobile Bottom Menu collects some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
-
-BoomDevs **does not gather any data by default.** The tracking SDK only starts gathering basic telemetry data **when a user allows it via the admin notice**. We collect the data to ensure a great user experience for all our users.
-
-BoomDevs tracking SDK **DOES NOT IMMEDIATELY** start gathering data, **without confirmation from users in any case.**
-
-Learn more about how [BoomDevs collects and uses this data](https://appsero.com/privacy-policy/).
 
 ### 🚀 Check out our Other Products 🚀
 
@@ -137,7 +127,7 @@ Here are some of our amazing plugins that you can use to boost your WordPress we
  Of course, it works with every WordPress theme.
 
 == Support ==
-If you have any questions, please email us at **[contact@boomdevs.com](mailto:contact@boomdevs.com)**
+If you have any questions, please email us at **[contact@wpmessiah.com](mailto:contact@wpmessiah.com)**
 
 == Screenshots ==
 
@@ -206,3 +196,6 @@ Added: integrated SureCart plugin support
 
 1.2.7 - 01 July 2024
 Fix: Setting panel & customizer Issues
+
+1.2.8 - 10 November 2024
+Update: Some link

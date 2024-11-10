@@ -6,7 +6,6 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       https://boomdevs.com
  * @since      1.0.0
  *
  * @package    Wp_Bnav
@@ -25,7 +24,7 @@
  * @since      1.0.0
  * @package    Wp_Bnav
  * @subpackage Wp_Bnav/includes
- * @author     BOOM DEVS <contact@boomdevs.com>
+ * @author     WP Messiah <contact@wpmessiah.com>
  */
 class Wp_Bnav {
 
@@ -70,7 +69,7 @@ class Wp_Bnav {
 		if ( defined( 'WP_BNAV_VERSION' ) ) {
 			$this->version = WP_BNAV_VERSION;
 		} else {
-			$this->version = '1.2.7';
+			$this->version = '1.2.8';
 		}
 		$this->plugin_name = 'wp-bnav';
 

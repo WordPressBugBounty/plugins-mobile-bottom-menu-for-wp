@@ -3,7 +3,6 @@
 /**
  * Handles plugin settings panels.
  *
- * @link       https://boomdevs.com
  * @since      1.0.0
  *
  * @package    Wp_Bnav
@@ -18,7 +17,7 @@
  * @since      1.0.0
  * @package    Wp_Bnav
  * @subpackage Wp_Bnav/includes
- * @author     BOOM DEVS <contact@boomdevs.com>
+ * @author     WP Messiah <contact@wpmessiah.com>
  */
 class Wp_Bnav_Settings {
 
@@ -85,11 +84,11 @@ class Wp_Bnav_Settings {
                 esc_url('https://wordpress.org/support/plugin/mobile-bottom-menu-for-wp/reviews/#new-post')
             ) . ' ' . sprintf(
                 __('Visit our plugin usage <a href="%s">documentation</a>.', 'wp-bnav'),
-                esc_url('https://boomdevs.com/docs/wp-mobile-bottom-menu/')
+                esc_url('https://wpmessiah.com/docs/wp-mobile-bottom-menu/')
             ),
             'footer_credit'   => sprintf(
-                __( 'A proud creation of <a href="%s">BOOM DEVS</a>', 'wp-bnav' ),
-                esc_url( 'https://boomdevs.com/' )
+                __( 'A proud creation of <a href="%s">WP Messiah</a>', 'wp-bnav' ),
+                esc_url( 'https://wpmessiah.com/' )
             ),
             'database'        => 'option',
             'transport'       => 'refresh',
@@ -904,7 +903,7 @@ class Wp_Bnav_Settings {
      * @return string
      */
     protected function get_premium_alert_message() {
-        return sprintf( '%s <a href="https://boomdevs.com/products/wp-mobile-bottom-menu/">%s</a>',
+        return sprintf( '%s <a href="https://wpmessiah.com/products/wp-mobile-bottom-menu/">%s</a>',
             __( 'This is a premium feature of WP Mobile Bottom Menu and requires the pro version of this plugin to unlock.', 'wp-bnav' ),
             __( 'Download Pro Now', 'wp-bnav' )
         );
@@ -932,7 +931,7 @@ class Wp_Bnav_Settings {
                             <a class="button button-primary" target="_blank" href="https://wp-mobile-bottom-menu.boomdevs.com/bottom-menu/">View Demo</a>
                         </div>
                         <div class="right_btn">
-                            <a class="button button-secondary" target="_blank" href="https://boomdevs.com/products/wp-mobile-bottom-menu/">Get Pro Now</a>
+                            <a class="button button-secondary" target="_blank" href="https://wpmessiah.com/products/wp-mobile-bottom-menu/">Get Pro Now</a>
                         </div>
                     </div>
                 </div>
@@ -944,10 +943,10 @@ class Wp_Bnav_Settings {
                     </div>
                     <div class="money_back_guarantee_text">
                         <h3>14 Days Money Back Guarantee!</h3>
-                        <p>Your satisfaction is guaranteed under our 100% No-Risk Double Guarantee. We will<br> happily <a target="_blank" href="https://boomdevs.com/refund-policy/">refund</a> 100% of your money if you don’t think our plugin works well within 14 days.</p>
+                        <p>Your satisfaction is guaranteed under our 100% No-Risk Double Guarantee. We will<br> happily <a target="_blank" href="https://wpmessiah.com/refund-policy/">refund</a> 100% of your money if you don’t think our plugin works well within 14 days.</p>
                     </div>
                     <div class="money_back_guarantee_btn">
-                        <a class="button button-primary" target="_blank" href="https://boomdevs.com/products/">View All Products</a>
+                        <a class="button button-primary" target="_blank" href="https://wpmessiah.com/products/">View All Products</a>
                     </div>
                 </div>
             </div>

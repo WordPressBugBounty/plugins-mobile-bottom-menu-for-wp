@@ -6,7 +6,6 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       https://boomdevs.com
  * @since      1.0.0
  *
  * @package    Wp_Bnav
@@ -22,7 +21,7 @@
  * @since      1.0.0
  * @package    Wp_Bnav
  * @subpackage Wp_Bnav/includes
- * @author     BOOM DEVS <contact@boomdevs.com>
+ * @author     WP Messiah <contact@wpmessiah.com>
  */
 class Wp_Bnav_i18n {
 

@@ -54,3 +54,6 @@ Added: integrated SureCart plugin suppor
 
 1.2.7 - 01 July 2024
 Fix: Setting panel & customizer Issuest
+
+1.2.8 - 10 November 2024
+Update: Some link
