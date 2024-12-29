@@ -928,7 +928,7 @@ class Wp_Bnav_Settings {
                     </div>
                     <div class="header_btn">
                         <div class="left_btn">
-                            <a class="button button-primary" target="_blank" href="https://wp-mobile-bottom-menu.boomdevs.com/bottom-menu/">View Demo</a>
+                            <a class="button button-primary" target="_blank" href="https://demo.wpmessiah.com/bottom-menu/">View Demo</a>
                         </div>
                         <div class="right_btn">
                             <a class="button button-secondary" target="_blank" href="https://wpmessiah.com/products/wp-mobile-bottom-menu/">Get Pro Now</a>
