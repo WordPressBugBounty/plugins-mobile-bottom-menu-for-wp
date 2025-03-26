@@ -1,5 +1,5 @@
 === WP Mobile Bottom Menu ===
-Contributors: boomdevs, wpmessiah
+Contributors: wpmessiah
 Tags: Bottom menu, mobile menu, sticky menu, Navigation Menu, menu
 Requires at least: 5.0
 Tested up to: 6.7.1
