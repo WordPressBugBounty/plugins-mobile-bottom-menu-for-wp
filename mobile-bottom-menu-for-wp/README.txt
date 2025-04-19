@@ -2,8 +2,8 @@
 Contributors: wpmessiah
 Tags: Bottom menu, mobile menu, sticky menu, Navigation Menu, menu
 Requires at least: 5.0
-Tested up to: 6.7.1
-Stable tag: 1.2.9
+Tested up to: 6.8
+Stable tag: 1.3.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -84,9 +84,9 @@ Do you want more features for your WordPress Mobile Bottom menu? Upgrade to the 
 
 [View Demo](https://demo.wpmessiah.com/bottom-menu/)
 
-[Read Documentation](https://wpmessiah.com/docs/wp-mobile-bottom-menu/)
+[Read Documentation](https://docs.wpmessiah.com/docs/wp-mobile-bottom-menu/)
 
-[Submit Ticket](https://wpmessiah.com/forums/forum/wp-mobile-bottom-menu/)
+[Submit Ticket](https://support.wpmessiah.com/)
 
 Made with ❣️ By [WP Messiah](https://wpmessiah.com/)
 
@@ -202,3 +202,8 @@ Update: Some link
 
 1.2.9 - 29 December 2024
 Fix: Text Domain warning Issues 
+
+1.3.0 - 14 April 2025
+Fix: is_plugin_active error issues
+compatibility: Enhanced compatibility with WordPress 6.8
+Update: Docs and Support Link 

@@ -779,6 +779,11 @@ class Wp_Bnav_Settings {
             ) );
         }
 
+        // Ensure is_plugin_active() function is available
+        if (!function_exists('is_plugin_active')) {
+            require_once ABSPATH . 'wp-admin/includes/plugin.php';
+        }
+
         $is_ai_activated = is_plugin_active('ai-image-alt-text-generator-for-wp/boomdevs-ai-image-alt-text-generator.php');
 
         if (!WP_BNAV_Utils::isProActivated() && !$is_ai_activated) {

@@ -15,7 +15,7 @@
  * Plugin Name:       WP Mobile Bottom Menu
  * Plugin URI:        https://wpmessiah.com/products/wp-mobile-bottom-menu/
  * Description:       Smooth Navigation for Mobile. Create an Eye-Catching Sticky Bottom Menu with Limitless Customization Options.
- * Version:           1.2.9
+ * Version:           1.3.0
  * Author:            WP Messiah
  * Author URI:        https://wpmessiah.com
  * License:           GPL-2.0+
@@ -36,7 +36,7 @@ require __DIR__ . '/vendor/autoload.php';
 /**
  * Plugin global information..
  */
-define( 'WP_BNAV_VERSION', '1.2.9' );
+define( 'WP_BNAV_VERSION', '1.3.0' );
 define( 'WP_BNAV_PATH', plugin_dir_path( __FILE__ ) );
 define( 'WP_BNAV_URL', plugin_dir_url( __FILE__ ) );
 define( 'WP_BNAV_SLUG', 'wp-bnav' );
