@@ -69,7 +69,7 @@ class Wp_Bnav {
 		if ( defined( 'WP_BNAV_VERSION' ) ) {
 			$this->version = WP_BNAV_VERSION;
 		} else {
-			$this->version = '1.3.0';
+			$this->version = '1.4.0';
 		}
 		$this->plugin_name = 'wp-bnav';
 
@@ -135,7 +135,10 @@ class Wp_Bnav {
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wp-bnav-register-menu.php';
 
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wp-bnav-ajax.php';
+		
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-boomdevs-notification-widget-bottom-menu.php';
 
+	
 		$this->loader = new Wp_Bnav_Loader();
 
 	}
