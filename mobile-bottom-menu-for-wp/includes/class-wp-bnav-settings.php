@@ -100,7 +100,7 @@ class Wp_Bnav_Settings {
         ];
 
         // Register settings panel type
-        $current_url = home_url($_SERVER['REQUEST_URI']);
+        $current_url = esc_url_raw(home_url($_SERVER['REQUEST_URI']));
 
         $options_panel_builder = apply_filters( 'wp_bnav_register_options_panel', $options_panel_func, $options_panel_config );
 
@@ -1290,6 +1290,10 @@ class Wp_Bnav_Settings {
 }
 
 function wp_bnav_customizer_menu() {
+
+    if ( ! current_user_can('manage_options') ) {
+        return; // Only show for admin users
+    }
     ?>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
@@ -1302,4 +1306,5 @@ function wp_bnav_customizer_menu() {
     </script>
     <?php
 }
+
 add_action('admin_footer', 'wp_bnav_customizer_menu');

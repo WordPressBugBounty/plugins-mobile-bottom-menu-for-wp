@@ -52,7 +52,6 @@ class Wp_Bnav_Admin {
 		$this->version = $version;
 
 		add_action('wp_ajax_Wp_Bnav_custom_plugin_install', [$this, 'Wp_Bnav_custom_plugin_install']);
-        add_action( 'wp_ajax_nopriv_Wp_Bnav_custom_plugin_install', [$this, 'Wp_Bnav_custom_plugin_install'] );
 
 	}
 
@@ -155,6 +154,12 @@ class Wp_Bnav_Admin {
 	public function Wp_Bnav_custom_plugin_install() {
 
         check_ajax_referer('Wp_Bnav_custom_plugin_install_nonce', 'nonce');
+
+		$current_user = wp_get_current_user();
+
+		if ( ! in_array( 'administrator', $current_user->roles ) || ! current_user_can( 'manage_options' ) ) {
+			wp_send_json_error(['message' => 'Unauthorized']);
+		}
     
         $plugin_slug = 'ai-image-alt-text-generator-for-wp';
         $plugin_file = 'ai-image-alt-text-generator-for-wp/boomdevs-ai-image-alt-text-generator.php';

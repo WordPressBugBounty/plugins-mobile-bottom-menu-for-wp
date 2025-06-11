@@ -325,6 +325,8 @@
 
 		public function yith_wcwl_ajax_update_count()
 		{
+			check_ajax_referer('yith_wcwl_nonce', 'nonce');
+			
 			wp_send_json(array(
 				'count' => yith_wcwl_count_all_products()
 			));
