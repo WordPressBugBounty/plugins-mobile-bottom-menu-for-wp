@@ -3,7 +3,7 @@ Contributors: wpmessiah
 Tags: Bottom menu, mobile menu, sticky menu, Navigation Menu, menu
 Requires at least: 5.0
 Tested up to: 6.8
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -215,3 +215,6 @@ Fix: some minor issues
 1.4.1 - 11 June 2025
 Fix: Admin loading issue
 Fixed: Broken access control issues by implementing proper authorization, authentication, and nonce checks in sensitive functions. These fixes prevent unprivileged users from executing higher-privileged actions.
+
+1.4.2 - 18 June 2025
+Add options for single menu image width and vertical offset (from top or bottom).

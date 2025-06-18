@@ -172,14 +172,27 @@
 			foreach ($items as $item) {
 
 				$meta = get_post_meta($item->ID, 'wp-bnav-menu', true);
-
+				
 				$normal_icon = '';
+
+				$width      = isset($meta['icon-image-width']) && is_numeric($meta['icon-image-width']) ? (int)$meta['icon-image-width'] : 20;
+				$margin_top = isset($meta['icon-image-offset-top']) && is_numeric($meta['icon-image-offset-top']) ? (int)$meta['icon-image-offset-top'] : '';
+				$image_url  = isset($meta['image']['url']) ? esc_url($meta['image']['url']) : '';
+				$active_url  = isset($meta['active-image']['url']) ? esc_url($meta['active-image']['url']) : '';
+
 				if (!empty($meta['icon']) && $meta['icon-mode'] && $meta['show-icon']) {
-					$normal_icon = '<div class="icon_wrapper normal"><i class="' . $meta['icon'] . '"></i></div>';
+					$normal_icon = '<div class="icon_wrapper normal" style="margin-top: ' . $margin_top . 'px;"><i class="' . $meta['icon'] . '"></i></div>';
 				}
 
-				if (!empty($meta['image']['url']) && empty($meta['icon-mode']) && !empty($meta['show-icon'])) {
-					$normal_icon = '<div class="icon_wrapper normal"><div class="img_icon"><img src="' . $meta['image']['url'] . '" /> </div></div>';
+				if (!empty($image_url) && empty($meta['icon-mode']) && !empty($meta['show-icon'])) {
+					$normal_icon = '<div class="icon_wrapper normal" style="margin-top: ' . $margin_top . 'px;">
+						<div class="img_icon">
+							<img 
+								style="width: ' . $width . 'px;"
+								src="' . $image_url . '" 
+								alt="icon image" />
+						</div>
+					</div>';
 				}
 
 				$menu_text = '';
@@ -194,16 +207,18 @@
 
 				$active_icon = '';
 
+
 				if (!empty($meta['active-icon']) && $meta['icon-mode'] && $meta['show-icon']) {
 					$active_icon = '<div class="icon_wrapper active"><i class="' . $meta['active-icon'] . '"></i></div>';
 				}
 
-				if (!empty($meta['active-image']['url']) && empty($meta['icon-mode']) && !empty($meta['show-icon'])) {
-					$active_icon = '<div class="icon_wrapper active"><div class="img_icon"><img src="' . $meta['active-image']['url'] . '" /> </div></div>';
+				if (!empty($active_url) && empty($meta['icon-mode']) && !empty($meta['show-icon'])) {
+					$active_icon = '<div class="icon_wrapper active">
+						<div class="img_icon">
+							<img style="width: ' . $width . 'px;" src="' . $active_url . '" alt="active icon" />
+						</div>
+					</div>';
 				}
-
-
-				// echo do_shortcode($meta["custom-content"]);
 
 				$menu_custom_content = '';
 				if (!empty($meta['custom-content'])) {
