@@ -76,3 +76,6 @@ Fixed: Broken access control issues by implementing proper authorization, authen
 
 1.4.2 - 18 June 2025
 Add options for single menu image width and vertical offset (from top or bottom).
+
+1.4.3 - 24 June 2025
+Add new premade screen

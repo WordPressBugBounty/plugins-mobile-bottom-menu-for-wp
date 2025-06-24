@@ -730,6 +730,13 @@ class Wp_Bnav_Settings {
             'skin_seven' => WP_BNAV_URL . 'admin/img/preview_layout_skin_seven.png',
             'skin_eight' => WP_BNAV_URL . 'admin/img/preview_layout_skin_eight.png',
             'skin_nine' => WP_BNAV_URL . 'admin/img/preview_layout_skin_nine.png',
+
+            'skin_ten' => WP_BNAV_URL . 'admin/img/layout_preview_light_skin_ten.jpg',
+            'skin_eleven' => WP_BNAV_URL . 'admin/img/layout_preview_light_skin_eleven.jpg',
+            'skin_twelve' => WP_BNAV_URL . 'admin/img/layout_preview_light_skin_twelve.jpg',
+            'skin_thirteen' => WP_BNAV_URL . 'admin/img/layout_preview_light_skin_thirteen.jpg',
+            'skin_fourteen' => WP_BNAV_URL . 'admin/img/layout_preview_light_skin_fourteen.jpg',
+            'skin_fifteen' => WP_BNAV_URL . 'admin/img/layout_preview_light_skin_fifteen.jpg',
         );
 
         $skins = apply_filters( 'wp_bnav_get_skins', $default_skins );
