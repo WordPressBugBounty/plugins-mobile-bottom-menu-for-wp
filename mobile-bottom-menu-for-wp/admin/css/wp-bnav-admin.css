@@ -13,7 +13,7 @@
 }
 .csf-field-image_select .csf--image {
     margin: 0;
-    padding: 25px;
+    padding: 0;
 }
 
 .premade_skins .csf-fieldset .csf-fieldset-content .csf--image-group figure img {
@@ -37,6 +37,7 @@
 .premade_skins .csf-siblings.csf--image-group{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
 }
 
 .csf-customize-field .premade_skins .csf-siblings.csf--image-group{
@@ -470,3 +471,125 @@ h1, h2, h3, h4, h5, h6 p {
 .wp_bnav_framework .csf-copyright a {
     color: gold !important; 
 }
+
+
+/* new css */
+
+
+.bottom-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.bottom-menu {
+    background: #fff;
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    top: 35px;
+    margin: auto;
+}
+
+.skin-preview-box {
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+.customize-fields{
+    margin-top: 10px;
+}
+.input.custom-icon{
+    margin-top: 5px;
+}
+
+/*:modal css*/
+
+
+/* Modal overlay */
+#bnav-import-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(0,0,0,0.5);
+    display: flex; /* flex use korbo centering er jonno */
+    justify-content: center;
+    align-items: center;
+    padding: 15px; /* small screen e space */
+    box-sizing: border-box;
+    margin-top: -105px;
+
+}
+
+/* Modal content */
+#bnav-import-modal .bnav-import-modal-content {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    max-width: 450px;
+    width: 100%;
+    /* text-align: center; */
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    animation: modalFade 0.3s ease;
+    margin-top: -350px;
+}
+
+/* Close button */
+#bnav-import-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+/* Import buttons */
+.bnav-import-btn {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #2271b1;
+    color: #fff;
+    font-family: inherit;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+.bnav-import-btn:hover {
+    background-color: #005177;
+}
+.bnav-import-info {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.bnav-import-info strong {
+    font-weight: 600; /* bold highlight */
+    color: #000; /* dark color for emphasis */
+}
+.wp-die-message, p {
+    font-size: 14px;
+    font-family: inherit;
+   
+}
+
+
+

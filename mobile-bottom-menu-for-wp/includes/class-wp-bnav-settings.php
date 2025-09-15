@@ -543,7 +543,7 @@ class Wp_Bnav_Settings {
                     'id' => 'main-nav-active-item-bg',
                     'type' => 'background',
                     'title' => __( 'Item active background', 'wp-bnav' ),
-                    'output'      => array('.bnav_bottom_nav_wrapper ul li > a .bnav_menu_items:hover', '.bnav_bottom_nav_wrapper ul li.current_page_item a .bnav_menu_items', '.bnav_bottom_nav_wrapper ul li.current_page_parent a .bnav_menu_items'),
+                    'output'      => array('.bnav_bottom_nav_wrapper ul li > a .bnav_menu_items:hover', '.bnav_bottom_nav_wrapper ul li.current-menu-item a .bnav_menu_items', '.bnav_bottom_nav_wrapper ul li.current-menu-item a .bnav_menu_items', '.bnav_bottom_nav_wrapper ul li.active a .bnav_menu_items'),
                     'output_mode' => 'background-color',
                     'background_image' => false,
                     'background_position' => false,
@@ -614,7 +614,7 @@ class Wp_Bnav_Settings {
                     'id'    => 'main-nav-active-item-icon-typography',
                     'type'  => 'typography',
                     'title' => __( 'Active icon typography', 'wp-bnav' ),
-                    'output'      => array('.bnav_bottom_nav_wrapper ul li > a .bnav_menu_items:hover .icon_wrapper i', '.bnav_bottom_nav_wrapper ul li.current_page_item a .icon_wrapper i', '.bnav_bottom_nav_wrapper ul li.current_page_parent a .icon_wrapper i'),
+                    'output'      => array('.bnav_bottom_nav_wrapper ul li > a .bnav_menu_items:hover .icon_wrapper i', '.bnav_bottom_nav_wrapper ul li.current-menu-item a .icon_wrapper i', '.bnav_bottom_nav_wrapper ul li.current_page_parent a .icon_wrapper i'),
                     'font_family' => false,
                     'font_style' => false,
                     'line_height' => false,
@@ -656,7 +656,7 @@ class Wp_Bnav_Settings {
                 array(
                     'id'    => 'main-nav-active-item-typography',
                     'type'  => 'typography',
-                    'output'      => array('.bnav_bottom_nav_wrapper ul li a .bnav_menu_items:hover .text_wrapper', '.bnav_bottom_nav_wrapper ul li.current_page_item a .text_wrapper', '.bnav_bottom_nav_wrapper ul li.current_page_parent a .text_wrapper', '.bnav_bottom_nav_wrapper ul li.current_page_item a .bnav_menu_items .cart_total'),
+                    'output'      => array('.bnav_bottom_nav_wrapper ul li a .bnav_menu_items:hover .text_wrapper', '.bnav_bottom_nav_wrapper ul li.active a .bnav_menu_items .text_wrapper', '.bnav_bottom_nav_wrapper ul li.current-menu-item a .text_wrapper', '.bnav_bottom_nav_wrapper ul li.current-menu-item a .text_wrapper', '.bnav_bottom_nav_wrapper ul li.current-menu-item a .bnav_menu_items .cart_total'),
                     'title' => __( 'Active text typography', 'wp-bnav' ),
                     'default' => array(
                         'color'          => '#FFFFFF',
@@ -873,15 +873,18 @@ class Wp_Bnav_Settings {
                 ),
                 array(
                     'id'    => 'icon-image-offset-top',
-                    'type'  => 'slider',
+                    'type'  => 'spacing',
                     'title' => __('Top Offset', 'wp-bnav'),
                     'output' => '.bnav_menu_items .icon_wrapper .img_icon img',
                     'output' => '.bnav_bottom_nav_wrapper ul li a .icon_wrapper i',
                     'output_mode' => 'margin',
-                    'unit'  => 'px',
-                    'min'   => 0,
-                    'max'   => 100,
-                    'unit' => 'px'
+                    'default'  => array(
+                        'top'    => '0',
+                        'right'  => '0',
+                        'bottom' => '0',
+                        'left'   => '0',
+                        'unit'   => 'px',
+                      ),
                 ),
                 array(
                     'id'    => 'icon',

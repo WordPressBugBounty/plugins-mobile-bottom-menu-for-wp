@@ -69,7 +69,7 @@ class Wp_Bnav {
 		if ( defined( 'WP_BNAV_VERSION' ) ) {
 			$this->version = WP_BNAV_VERSION;
 		} else {
-			$this->version = '1.4.3';
+			$this->version = '1.4.4';
 		}
 		$this->plugin_name = 'wp-bnav';
 
@@ -135,8 +135,9 @@ class Wp_Bnav {
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wp-bnav-register-menu.php';
 
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wp-bnav-ajax.php';
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wp-bnav-ajax-style.php';
 		
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-boomdevs-notification-widget-bottom-menu.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wp-bnav-notification-widget-bottom-menu.php';
 
 	
 		$this->loader = new Wp_Bnav_Loader();
@@ -187,6 +188,11 @@ class Wp_Bnav {
 
         $this->loader->add_action('wp_ajax_nopriv_set_premade_skin', $plugin_ajax, 'set_premade_skin');
         $this->loader->add_action('wp_ajax_set_premade_skin', $plugin_ajax, 'set_premade_skin');
+
+		// Style only
+		$plugin_ajax_style_only = new Wp_Bnav_Ajax_Style_Only();
+		$this->loader->add_action('wp_ajax_nopriv_set_premade_skin_style', $plugin_ajax_style_only, 'set_premade_skin');
+        $this->loader->add_action('wp_ajax_set_premade_skin_style', $plugin_ajax_style_only, 'set_premade_skin');
 
     }
 

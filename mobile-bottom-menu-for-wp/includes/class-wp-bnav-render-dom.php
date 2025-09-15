@@ -146,7 +146,7 @@
             </div>
             <div class="bnav_overlay_close_all"></div>
 			<?php
-			if (isset($settings['scroll_hide_menu']) && $settings['scroll_hide_menu'] !== ''):
+			if (isset($settings['scroll_hide_menu']) && $settings['scroll_hide_menu'] === '1'):
 				?>
                 <script>
                     jQuery(window).on('scroll', function () {
@@ -170,22 +170,41 @@
 			}
 
 			foreach ($items as $item) {
-
 				$meta = get_post_meta($item->ID, 'wp-bnav-menu', true);
 				
 				$normal_icon = '';
 
 				$width      = isset($meta['icon-image-width']) && is_numeric($meta['icon-image-width']) ? (int)$meta['icon-image-width'] : 20;
-				$margin_top = isset($meta['icon-image-offset-top']) && is_numeric($meta['icon-image-offset-top']) ? (int)$meta['icon-image-offset-top'] : '';
 				$image_url  = isset($meta['image']['url']) ? esc_url($meta['image']['url']) : '';
 				$active_url  = isset($meta['active-image']['url']) ? esc_url($meta['active-image']['url']) : '';
+				$offset_top = isset($meta['icon-image-offset-top']) ? $meta['icon-image-offset-top'] : '';
+
+				$style_parts = [];
+
+				if (!empty($offset_top['top'])) {
+					$style_parts[] = 'margin-top: ' . intval($offset_top['top']) . 'px;';
+				}
+
+				if (!empty($offset_top['right'])) {
+					$style_parts[] = 'margin-right: ' . intval($offset_top['right']) . 'px;';
+				}
+
+				if (!empty($offset_top['bottom'])) {
+					$style_parts[] = 'margin-bottom: ' . intval($offset_top['bottom']) . 'px;';
+				}
+
+				if (!empty($offset_top['left'])) {
+					$style_parts[] = 'margin-left: ' . intval($offset_top['left']) . 'px;';
+				}
+
+				$style_attr = !empty($style_parts) ? 'style="' . implode(' ', $style_parts) . '"' : '';
 
 				if (!empty($meta['icon']) && $meta['icon-mode'] && $meta['show-icon']) {
-					$normal_icon = '<div class="icon_wrapper normal" style="margin-top: ' . $margin_top . 'px;"><i class="' . $meta['icon'] . '"></i></div>';
+					$normal_icon = '<div class="icon_wrapper normal" ' . $style_attr . '><i class="' . $meta['icon'] . '"></i></div>';
 				}
 
 				if (!empty($image_url) && empty($meta['icon-mode']) && !empty($meta['show-icon'])) {
-					$normal_icon = '<div class="icon_wrapper normal" style="margin-top: ' . $margin_top . 'px;">
+					$normal_icon = '<div class="icon_wrapper normal" ' . $style_attr . '>
 						<div class="img_icon">
 							<img 
 								style="width: ' . $width . 'px;"
@@ -195,10 +214,19 @@
 					</div>';
 				}
 
+				// $menu_text = '';
+				// if (empty($meta['hide-text']) || $meta['hide-text'] !== '1') {
+				// 	$menu_text = '<div class="text_wrapper">' . $item->title . '</div>';
+				// }
+
 				$menu_text = '';
-				if (empty($meta['hide-text'])) {
-					$menu_text = '<div class="text_wrapper">' . $item->title . '</div></div>';
+				if (isset($meta['hide-text']) && $meta['hide-text'] === '1') {
+					
+				} else {
+					
+					$menu_text = '<div class="text_wrapper">' . $item->title . '</div>';
 				}
+
 
 				$icon_position_class = '';
 				if (isset($meta['icon-position'])) {
@@ -207,13 +235,12 @@
 
 				$active_icon = '';
 
-
 				if (!empty($meta['active-icon']) && $meta['icon-mode'] && $meta['show-icon']) {
-					$active_icon = '<div class="icon_wrapper active"><i class="' . $meta['active-icon'] . '"></i></div>';
+					$active_icon = '<div class="icon_wrapper active" ' . $style_attr . '><i class="' . $meta['active-icon'] . '"></i></div>';
 				}
 
 				if (!empty($active_url) && empty($meta['icon-mode']) && !empty($meta['show-icon'])) {
-					$active_icon = '<div class="icon_wrapper active">
+					$active_icon = '<div class="icon_wrapper active" ' . $style_attr .'>
 						<div class="img_icon">
 							<img style="width: ' . $width . 'px;" src="' . $active_url . '" alt="active icon" />
 						</div>
@@ -252,9 +279,9 @@
 				}
 
 				if (!empty($meta['wishlist-cart'])) {
-					$menu_inner_wrap = '<div class="bnav_menu_items ' . $search_toggle_class . '"><div class="' . $icon_position_class . '">' . $normal_icon . $active_icon . $menu_text . $cart_total . bnav_wishlist_get_items_count() . '</div>';
+					$menu_inner_wrap = '<div class="bnav_menu_items ' . $search_toggle_class . '"><div class="' . $icon_position_class . '">' . $normal_icon . $active_icon . $menu_text . $cart_total . bnav_wishlist_get_items_count() . '</div></div>';
 				} else {
-					$menu_inner_wrap = '<div class="bnav_menu_items ' . $search_toggle_class . '"><div class="' . $icon_position_class . '">' . $normal_icon . $active_icon . $menu_text . $cart_total . '</div>';
+					$menu_inner_wrap = '<div class="bnav_menu_items ' . $search_toggle_class . '"><div class="' . $icon_position_class . '">' . $normal_icon . $active_icon . $menu_text . $cart_total . '</div></div>';
 				}
 
 				if (WP_BNAV_Utils::isProActivated()) {

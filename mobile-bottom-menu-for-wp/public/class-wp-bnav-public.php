@@ -122,7 +122,7 @@ class Wp_Bnav_Public
                 .bnav_bottom_nav_wrapper ul.bnav_main_menu li a .icon_wrapper.normal {
                     display: flex;
                 }
-                .bnav_bottom_nav_wrapper ul.bnav_main_menu li.current_page_item .icon_wrapper.normal {
+                .bnav_bottom_nav_wrapper ul.bnav_main_menu li.current-menu-item .icon_wrapper.normal {
                     display: none;
                 }
 
@@ -131,11 +131,11 @@ class Wp_Bnav_Public
                 .bnav_bottom_nav_wrapper ul.bnav_main_menu li a .icon_wrapper.normal {
                     display: none !important;
                 }
-                .bnav_bottom_nav_wrapper ul.bnav_main_menu li.current_page_item .icon_wrapper.normal {
+                .bnav_bottom_nav_wrapper ul.bnav_main_menu li.current-menu-item .icon_wrapper.normal {
                     display: none;
                 }
 
-                .bnav_bottom_nav_wrapper ul.bnav_main_menu li.current_page_item .icon_wrapper.active {
+                .bnav_bottom_nav_wrapper ul.bnav_main_menu li.current-menu-item .icon_wrapper.active {
                     display: flex;
                 }
 
@@ -145,7 +145,7 @@ class Wp_Bnav_Public
                     display: flex;
                 }
 
-                .bnav_bottom_nav_wrapper ul.bnav_main_menu li.current_page_item .icon_wrapper {
+                .bnav_bottom_nav_wrapper ul.bnav_main_menu li.current-menu-item .icon_wrapper {
                     display: none !important;
                 }
 
@@ -171,7 +171,7 @@ class Wp_Bnav_Public
                     display: none;
                 }
 
-                .bnav_bottom_nav_wrapper ul li.current_page_item .text_wrapper {
+                .bnav_bottom_nav_wrapper ul li.current-menu-item .text_wrapper, .bnav_bottom_nav_wrapper ul li.active .text_wrapper {
                     display: flex;
                 }
 
@@ -181,7 +181,7 @@ class Wp_Bnav_Public
                     display: flex;
                 }
 
-                .bnav_bottom_nav_wrapper ul.bnav_main_menu li.current_page_item .text_wrapper {
+                .bnav_bottom_nav_wrapper ul.bnav_main_menu li.current-menu-item .text_wrapper {
                     display: none;
                 }
 
@@ -269,12 +269,21 @@ class Wp_Bnav_Public
                 }
 
                 /*.bnav_sub_menu_wrapper ul.sub-menu.depth-0 li a .bnav_menu_items .icon_wrapper.normal*/
-
-                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current_page_item .icon_wrapper.active {
+/* 
+                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current-menu-item .icon_wrapper.active {
                     display: flex;
-                }
+                } */
                 .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li a .bnav_menu_items .text_wrapper {
                     display: flex;
+                }
+
+                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li a .bnav_menu_items .icon_wrapper.normal {
+                        display: none;
+                    }
+
+                
+                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current-menu-item .icon_wrapper.active {
+                    display: flex !important;
                 }
 
                 <?php if($settings['sub-nav-item-text-visibility'] === 'hide'): ?>
@@ -292,7 +301,7 @@ class Wp_Bnav_Public
                 <?php endif;?>
 
                 <?php if($settings['sub-nav-item-text-visibility'] === 'active'): ?>
-                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current_page_item a .text_wrapper{
+                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current-menu-item a .text_wrapper{
                     display: flex;
                 }
                 .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li a .bnav_menu_items .text_wrapper{
@@ -301,7 +310,7 @@ class Wp_Bnav_Public
                 <?php endif;?>
 
                 <?php if($settings['sub-nav-item-text-visibility'] === 'hide-active'): ?>
-                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current_page_item a .text_wrapper{
+                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current-menu-item a .text_wrapper{
                     display: none;
                 }
                 .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li a .text_wrapper{
@@ -325,19 +334,19 @@ class Wp_Bnav_Public
                 }
                 <?php endif;?>
                 <?php if($settings['sub-nav-item-icon-visibility'] === 'active'): ?>
-                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current_page_item a .bnav_menu_items .icon_wrapper.active{
+                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current-menu-item a .bnav_menu_items .icon_wrapper.active{
                     display: flex;
                 }
-                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current_page_item a .bnav_menu_items .icon_wrapper.normal{
+                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current-menu-item a .bnav_menu_items .icon_wrapper.normal{
                     display: none;
                 }
                 <?php endif;?>
 
                 <?php if($settings['sub-nav-item-icon-visibility'] === 'hide-active'): ?>
-                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current_page_item a .bnav_menu_items .icon_wrapper.normal{
+                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current-menu-item a .bnav_menu_items .icon_wrapper.normal{
                     display: flex;
                 }
-                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current_page_item a .bnav_menu_items .icon_wrapper.active{
+                .bnav_sub_menu_wrapper ul.sub-menu.depth-0 li.current-menu-item a .bnav_menu_items .icon_wrapper.active{
                     display: none;
                 }
                 /*hide-active*/
@@ -379,21 +388,29 @@ class Wp_Bnav_Public
                 } ?>
                 /* Child nav icon and text visibility */
 
-                .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li a .icon_wrapper {
-                    display: none;
+                .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li a .icon_wrapper.normal {
+                    display: flex;
                 }
 
                 .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li a .icon_wrapper.active {
-                    display: flex;
+                    display: none;
                 }
                 .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li .text_wrapper {
                     display: flex;
                 }
+                .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li.current-menu-item a .icon_wrapper.active {
+                    display: flex !important;
+                }
+                .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li.current-menu-item a .icon_wrapper.normal {
+                    display: none;
+                }
+
 
                 <?php if($settings['child-nav-item-text-visibility'] === 'hide'): ?>
                 .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li a .text_wrapper{
                     display: none !important;
                 }
+                
 
                 <?php endif; ?>
 
@@ -405,7 +422,7 @@ class Wp_Bnav_Public
                 <?php endif;?>
 
                 <?php if($settings['child-nav-item-text-visibility'] === 'active'): ?>
-                .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li.current_page_item a .text_wrapper{
+                .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li.current-menu-item a .text_wrapper{
                     display: flex;
                 }
                 .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li a .text_wrapper{
@@ -414,7 +431,7 @@ class Wp_Bnav_Public
                 <?php endif;?>
 
                 <?php if($settings['child-nav-item-text-visibility'] === 'hide-active'): ?>
-                .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li.current_page_item a .text_wrapper{
+                .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li.current-menu-item a .text_wrapper{
                     display: none;
                 }
                 .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li a .text_wrapper{
@@ -450,7 +467,7 @@ class Wp_Bnav_Public
                 .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li a .bnav_menu_items .icon_wrapper.normal{
                     display: flex;
                 }
-                .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li.current_page_item a .bnav_menu_items .icon_wrapper{
+                .bnav_bottom_nav_wrapper ul.sub-menu.bnav_child_sub_menu li.current-menu-item a .bnav_menu_items .icon_wrapper{
                     display: none;
                 }
                 /*hide-active*/
