@@ -69,7 +69,7 @@ class Wp_Bnav {
 		if ( defined( 'WP_BNAV_VERSION' ) ) {
 			$this->version = WP_BNAV_VERSION;
 		} else {
-			$this->version = '1.4.4';
+			$this->version = '1.4.5';
 		}
 		$this->plugin_name = 'wp-bnav';
 

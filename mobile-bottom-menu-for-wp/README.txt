@@ -3,7 +3,7 @@ Contributors: wpmessiah
 Tags: Bottom menu, mobile menu, sticky menu, Navigation Menu, menu
 Requires at least: 5.0
 Tested up to: 6.8
-Stable tag: 1.4.4
+Stable tag: 1.4.5
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -226,3 +226,6 @@ Add new premade screen
 Added Full Demo Menu Import feature for faster and easier demo setup.
 Introduced Style Import functionality to quickly replicate design styles across your site.
 Enhanced image customization options for better flexibility and smoother user experience.
+
+1.4.5 – 04 November 2025
+Fix: some minor issues
