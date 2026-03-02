@@ -2,8 +2,8 @@
 Contributors: wpmessiah
 Tags: Bottom menu, mobile menu, sticky menu, Navigation Menu, menu
 Requires at least: 5.0
-Tested up to: 6.8
-Stable tag: 1.4.5
+Tested up to: 6.9
+Stable tag: 1.4.6
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -229,3 +229,7 @@ Enhanced image customization options for better flexibility and smoother user ex
 
 1.4.5 – 04 November 2025
 Fix: some minor issues
+
+1.4.6 – 02 March 2026
+Update: Documentation link.
+Update: WordPress 6.9 compatibility.

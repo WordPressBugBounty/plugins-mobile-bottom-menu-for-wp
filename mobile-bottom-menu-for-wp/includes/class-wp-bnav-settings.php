@@ -84,7 +84,7 @@ class Wp_Bnav_Settings {
                 esc_url('https://wordpress.org/support/plugin/mobile-bottom-menu-for-wp/reviews/#new-post')
             ) . ' ' . sprintf(
                 __('Visit our plugin usage <a href="%s">documentation</a>.', 'wp-bnav'),
-                esc_url('https://wpmessiah.com/docs/wp-mobile-bottom-menu/')
+                esc_url('https://docs.wpmessiah.com/docs/wp-mobile-bottom-menu/')
             ),
             'footer_credit'   => sprintf(
                 __( 'A proud creation of <a href="%s">WP Messiah</a>', 'wp-bnav' ),
